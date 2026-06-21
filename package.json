@@ -1,0 +1,51 @@
+{
+  "name": "bookmyvenue",
+  "version": "1.0.0",
+  "description": "BookMyVenue is a 100% open-source initiative built by the **WeCode community**, designed to simplify the process of finding and booking venues in local areas. This is a platform built for the community, by the community. Whether you're looking for a cozy cafe for a quick meetup, a spacious auditorium for a community event, or a scenic outdoor space for a personal celebration, BookMyVenue aims to connect people with the perfect space—without the commercial overhead.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node src/server.ts",
+    "migrate": "sequelize-cli db:migrate",
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishab339/BookMyVenue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mishab339/BookMyVenue/issues"
+  },
+  "homepage": "https://github.com/mishab339/BookMyVenue#readme",
+  "dependencies": {
+    "bcryptjs": "3.0.3",
+    "celebrate": "15.0.3",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "joi": "18.2.3",
+    "jsonwebtoken": "9.0.3",
+    "mysql2": "3.22.5",
+    "sequelize": "6.37.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/express": "5.0.6",
+    "@types/jest": "30.0.0",
+    "@types/jsonwebtoken": "9.0.10",
+    "@types/node": "26.0.0",
+    "@types/supertest": "7.2.0",
+    "fast-check": "4.8.0",
+    "jest": "30.4.2",
+    "nodemon": "3.1.14",
+    "sequelize-cli": "6.6.5",
+    "supertest": "7.2.2",
+    "ts-jest": "29.4.11",
+    "ts-node": "10.9.2",
+    "typescript": "6.0.3"
+  }
+}
