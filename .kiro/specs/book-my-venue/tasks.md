@@ -30,7 +30,7 @@ Build a multi-tenant SaaS REST API in TypeScript (Node.js + Express + Sequelize 
     - Create empty placeholder files (or index barrel files) for `src/db/`, `src/middleware/`, `src/modules/auth/`, `src/modules/admin/`, `src/modules/venue/`, `src/modules/booking/`, `src/modules/user/`, `src/types/`, `tests/unit/`, `tests/integration/`, `tests/property/`
     - _Requirements: 1.1_
 
-- [ ] 2. Database layer: Sequelize instance, models, and migrations
+- [x] 2. Database layer: Sequelize instance, models, and migrations
   - [x] 2.1 Create Sequelize instance (`src/db/sequelize.ts`)
     - Instantiate `new Sequelize(config.db.name, config.db.user, config.db.password, { host, port, dialect: 'mysql', logging })` and export it
     - Export a `connectDb(): Promise<void>` helper that calls `sequelize.authenticate()`
@@ -55,7 +55,7 @@ Build a multi-tenant SaaS REST API in TypeScript (Node.js + Express + Sequelize 
     - Export `BookingStatus` type
     - _Requirements: 9.1_
 
-  - [ ] 2.6 Create Sequelize CLI migrations for all four tables
+  - [x] 2.6 Create Sequelize CLI migrations for all four tables
     - Write four migration files under `src/db/migrations/` that produce the exact DDL from the design (including foreign keys, indexes, `CHECK` constraint on bookings, `ON UPDATE CURRENT_TIMESTAMP`)
     - Ensure migrations run in dependency order: `users` → `refresh_tokens` → `venues` → `bookings`
     - _Requirements: 1.1_
