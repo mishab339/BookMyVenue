@@ -65,7 +65,7 @@ Build a multi-tenant SaaS REST API in TypeScript (Node.js + Express + Sequelize 
     - _Requirements: 3.4_
 
 - [ ] 3. Middleware: authentication, RBAC, and global error handler
-  - [ ] 3.1 Implement JWT authenticate middleware (`src/middleware/authenticate.ts`)
+  - [x] 3.1 Implement JWT authenticate middleware (`src/middleware/authenticate.ts`)
     - Extract `Bearer <token>` from `Authorization` header; return 401 if missing
     - Verify signature with `JWT_ACCESS_SECRET`; return 401 if expired or tampered
     - Attach decoded `{ id, role }` to `req.user`; call `next()`
@@ -77,7 +77,7 @@ Build a multi-tenant SaaS REST API in TypeScript (Node.js + Express + Sequelize 
     - Tag: `// Feature: book-my-venue, Property 9: Protected Routes Require Valid Bearer Token`
     - **Validates: Requirements 3.1, 3.2, 3.3**
 
-  - [ ] 3.3 Implement RBAC `checkRole` middleware factory (`src/middleware/checkRole.ts`)
+  - [x] 3.3 Implement RBAC `checkRole` middleware factory (`src/middleware/checkRole.ts`)
     - `checkRole(roles: UserRole[]): RequestHandler` — returns 403 when `req.user.role` is not in the allowed list; calls `next()` otherwise
     - _Requirements: 4.1_
 
